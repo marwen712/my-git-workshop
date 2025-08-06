@@ -1,1 +1,118 @@
-<h1> Hello marwen</h1>
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marwen Tabbabi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', 
+      };
+    </script>
+  </head>
+
+  <body class="bg-gray-100 text-gray-800 font-sans dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!--Light/Dark -->
+    <div class="fixed top-4 right-4 z-50">
+      <button id="toggleDark" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 rounded shadow">
+        Toggle Dark Mode
+      </button>
+    </div>
+
+    <!-- CV -->
+    <div class="max-w-4xl mx-auto p-6">
+      <!-- Header -->
+      <div class="text-center">
+        <img
+          src="https://avatars.githubusercontent.com/u/79926829?v=4"
+          alt="Marwen Tabbabi"
+          class="mx-auto w-32 h-32 rounded-full shadow-lg"
+        />
+        <h1 class="text-3xl font-bold mt-4">Marwen Tabbabi</h1>
+        <p class="text-gray-600 dark:text-gray-400">DevOps Engineer & Web Developer</p>
+      </div>
+
+      <!-- About Me -->
+      <section class="mt-8 bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">About Me</h2>
+        <p>
+          I'm a DevOps engineer with a passion for automation, optimization, and building efficient systems.
+          I started my journey in software development and quickly transitioned into DevOps, where I've
+          successfully contributed to cloud migrations and CI/CD pipelines. I'm currently expanding my
+          knowledge with web technologies like Node.js and React to bridge the gap between development and operations.
+        </p>
+      </section>
+
+      <!-- Personal Details -->
+      <section class="mt-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Personal Details</h2>
+        <ul class="space-y-2">
+          <li><strong>Nationality:</strong> Tunisian</li>
+          <li><strong>Location:</strong> Gafsa / Tunis</li>
+          <li><strong>Birthday:</strong> 7th of December 1995</li>
+          <li><strong>Hobbies:</strong> Coding, Learning DevOps, Football, Strategy Games</li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section class="mt-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Education</h2>
+        <p>Software Engineering with a specialization in DevOps – Ongoing</p>
+      </section>
+
+      <!-- Skills -->
+      <section class="mt-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-medium">Personal Skills</h3>
+            <ul class="list-disc ml-6 mt-2 text-sm">
+              <li>Communication</li>
+              <li>Problem Solving</li>
+              <li>Teamwork</li>
+              <li>Adaptability</li>
+              <li>Autonomy</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-medium">Technical Skills</h3>
+            <ul class="list-disc ml-6 mt-2 text-sm">
+              <li>Linux, Docker, Git, Jenkins</li>
+              <li>CI/CD Pipelines, Bash, YAML</li>
+              <li>React, Node.js (In Progress)</li>
+              <li>HTML, CSS, JavaScript</li>
+              <li>Ansible, Terraform (Basics)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="mt-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+        <h2 class="text-xl font-semibold mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Contact</h2>
+        <ul class="space-y-2">
+          <li><strong>Phone:</strong> +216 20 50 69 54</li>
+          <li><strong>Email:</strong> marwentabbabicpg@gmail.com</li>
+          <li><strong>GitHub:</strong> 
+            <a href="https://github.com/marwen712" 
+               class="text-blue-500 dark:text-blue-400 hover:underline">
+               https://github.com/marwen712
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- JavaScript Toggle Logic -->
+    <script>
+      const toggleButton = document.getElementById('toggleDark');
+      const htmlElement = document.documentElement;
+
+      toggleButton.addEventListener('click', () => {
+        htmlElement.classList.toggle('dark');
+      });
+    </script>
+  </body>
+</html>
