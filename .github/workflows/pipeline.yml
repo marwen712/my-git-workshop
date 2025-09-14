@@ -12,13 +12,18 @@ jobs:
 
     steps:
 
-      - name: verify
-        run: |
-          docker version
-          docker compose version
-          node -v
-          npm -v
-          git --version
+      - name: verify docker
+        run: docker --version
+      - name: verify docker compose 
+        run:  docker compose --version
+      - name: verify node
+        run: node -v
+      - name: verify npm 
+        run:  npm -v        
+      - name: verify git 
+        run:  git --version         
+          
+          
 
 
       - uses: actions/checkout@v5
