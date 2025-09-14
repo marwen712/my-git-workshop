@@ -21,19 +21,19 @@ jobs:
         run: ls -l
   job-3:
     runs-on: ubuntu-latest
-
+    needs: job-1
     steps: 
       - name: Run a multi-line script
         run: ls -l
   job-4:
     runs-on: ubuntu-latest
-
+    needs: job-2
     steps: 
       - name: Run a multi-line script
         run: ls -l
   job-5:
     runs-on: ubuntu-latest
-
+    needs: job-3
     steps: 
       - name: Run a multi-line script
         run: ls -l
