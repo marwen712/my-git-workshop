@@ -12,11 +12,17 @@ jobs:
 
     steps:
 
-      - name: Run a one-line script
-        run: mkdir test
+      - name: verify
+        run: |
+          docker version
+          docker compose version
+          node -v
+          npm -v
+          git --version
+
 
       - uses: actions/checkout@v5
-      
+
       - name: Run a multi-line script
         run: ls -l
   job-2:
